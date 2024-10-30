@@ -1,0 +1,50 @@
+﻿<Window x:Class="Лаба3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Лаба3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+
+        <!-- Меню -->
+        <Menu DockPanel.Dock="Top" Background="White" BorderBrush="Navy" BorderThickness="1">
+            <MenuItem Header="_Файл" ToolTip="Операции с файлами">
+                <MenuItem Header="_Изменить фон" Click="ChangeBackground_Click" ToolTip="Изменить цвет фона"/>
+                <MenuItem Header="_О программе" Click="About_Click" ToolTip="Информация о разработчике"/>
+                <Separator />
+                <MenuItem Header="_Выход" Click="Exit_Click" ToolTip="Закрыть приложение"/>
+            </MenuItem>
+        </Menu>
+
+        <!-- Панель инструментов -->
+        <ToolBar DockPanel.Dock="Top">
+            <Button Click="ChangeBackground_Click" ToolTip="Изменить цвет фона">
+                <Image Source="D:\Разработка програмных модулей\Лаба3\open2.png" Width="16" Height="16"/>
+            </Button>
+            <Separator />
+            <Button Click="About_Click" ToolTip="Информация о разработчике">
+                <Image Source="D:\Разработка програмных модулей\Лаба3\info.png" Width="16" Height="16"/>
+            </Button>
+            <Separator />
+            <Button Click="Exit_Click" ToolTip="Закрыть приложение">
+                <Image Source="D:\Разработка програмных модулей\Лаба3\exit.png" Width="16" Height="16"/>
+            </Button>
+        </ToolBar>
+
+        <!-- Строка состояния -->
+        <StatusBar DockPanel.Dock="Bottom">
+            <TextBlock x:Name="statusText" Text="Готово" />
+        </StatusBar>
+
+        <!-- Основное содержимое -->
+        <Grid>
+            <TextBlock Text="Добро пожаловать!" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontSize="20"/>
+        </Grid>
+
+    </DockPanel>
+</Window>
